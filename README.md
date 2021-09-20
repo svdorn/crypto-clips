@@ -4,13 +4,16 @@ Website for Crypto Clips.
 ## Getting Started
 
 First install necessary packages
-
-```npm install```
+```
+npm install
+```
 
 To run the website locally
-
-```npm run start```
+```
+npm run start
+```
 
 To deploy to gh-pages
-
-```npm run deploy```
+```
+npm run deploy
+```
