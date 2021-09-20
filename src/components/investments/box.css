@@ -1,0 +1,155 @@
+.box-container {
+  --outline-width: 2px;
+  --scale-time: 200ms;
+  --standard-shadow: 3px 2px 13px 1px #00000021;
+
+  box-shadow: var(--standard-shadow);
+  transition: box-shadow calc(var(--scale-time) * 2);
+  position: relative;
+  display: inline-block;
+}
+
+.borders {
+}
+.borders > div {
+  position: absolute;
+}
+
+.L-top,
+.C-top,
+.R-top {
+  width: 100%;
+  top: 0;
+  transform: scaleX(0.2);
+  height: var(--outline-width);
+}
+.L-top {
+  transform-origin: top left;
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+.C-top {
+  transform-origin: top middle;
+  transition: transform var(--scale-time) calc(var(--scale-time) * 2) ease-out;
+}
+.R-top {
+  transform-origin: top right;
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+
+.L-left,
+.R-left,
+.C-left {
+  width: var(--outline-width);
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+.L-left {
+  transform: scaleY(0.2);
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+.C-left {
+  transform: scaleY(0);
+  transition: transform var(--scale-time) var(--scale-time) linear;
+}
+.R-left {
+  transform: scaleY(0);
+  transition: transform var(--scale-time) ease-in;
+}
+
+.L-right,
+.R-right,
+.C-right {
+  width: var(--outline-width);
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+}
+.L-right {
+  transform: scaleY(0);
+  transition: transform var(--scale-time) ease-in;
+}
+.R-right {
+  transform: scaleY(0.2);
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+.C-right {
+  transform: scaleY(0);
+  transition: transform var(--scale-time) var(--scale-time) linear;
+}
+
+.L-bottom,
+.R-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--outline-width);
+  transform: scaleX(0);
+  transition: transform var(--scale-time) ease-in;
+}
+.L-bottom,
+.C-bottom-left {
+  transform-origin: bottom left;
+}
+.R-bottom,
+.C-bottom-right {
+  transform-origin: bottom right;
+}
+.C-bottom-left,
+.C-bottom-right {
+  bottom: 0;
+  width: 50%;
+  height: var(--outline-width);
+  transform: scaleX(0);
+  transition: transform var(--scale-time) ease-in;
+}
+.C-bottom-left {
+  left: 0;
+}
+.C-bottom-right {
+  right: 0;
+}
+
+/* ON HOVER */
+.box-container:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+.box-container:hover .L-top,
+.box-container:hover .C-top,
+.box-container:hover .R-top {
+  transform: scaleX(1);
+  transition: transform var(--scale-time) ease-in;
+}
+
+.box-container:hover .L-left,
+.box-container:hover .R-right {
+  transform: scaleY(1);
+  transition: transform var(--scale-time) ease-in;
+}
+
+.box-container:hover .L-right,
+.box-container:hover .R-left {
+  transform: scaleY(1);
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+
+.box-container:hover .C-right,
+.box-container:hover .C-left {
+  transform: scaleY(1);
+  transform: transform var(--scale-time) var(--scale-time) linear;
+}
+
+.box-container:hover .L-bottom,
+.box-container:hover .R-bottom {
+  transform: scaleX(1);
+  transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+
+.box-container:hover .C-bottom-left,
+.box-container:hover .C-bottom-right {
+  transform: scaleX(1);
+  transition: transform var(--scale-time) calc(var(--scale-time) * 2) ease-out;
+}
