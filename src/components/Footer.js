@@ -10,9 +10,9 @@ function Footer({ styles }) {
       <div {...css(styles.social)}>
         <Social />
       </div>
-      <div {...css(styles.by_stephen)}>
+      <div {...css(styles.by)}>
         <Icon {...css(styles.icon)}>code</Icon> with{" "}
-        <Icon {...css(styles.icon)}>favorite</Icon> by Stephen Dorn
+        <Icon {...css(styles.icon)}>favorite</Icon> by Crypto Clips
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ export default withStyles(({ color }) => ({
     padding: "20px 0 10px"
   },
 
-  by_stephen: {
+  by: {
     color: "white"
   },
 
