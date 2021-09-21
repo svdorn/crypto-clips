@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Icon from "@material-ui/core/Icon";
 import { css, withStyles } from "../withStyles";
 
 class Home extends React.Component {
