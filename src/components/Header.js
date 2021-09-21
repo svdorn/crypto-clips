@@ -5,9 +5,8 @@ import { css, withStyles } from "../withStyles";
 
 const menuItems = [
   { name: "About", link: "about" },
-  { name: "Tech", link: "roadmap" },
-  { name: "Investing", link: "investing" },
-  { name: "Contact", link: "contact" }
+  { name: "Traits", link: "traits" },
+  { name: "Roadmap", link: "roadmap" }
 ];
 
 class Header extends React.Component {

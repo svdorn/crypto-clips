@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css, withStyles } from "../withStyles";
 
-class Roadmap extends React.Component {
+class Traits extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,14 +15,14 @@ class Roadmap extends React.Component {
     return (
       <div {...css(styles.container)}>
         <section {...css(styles.intro)}>
-          <div>Roadmap</div>
+          <div>Traits</div>
         </section>
       </div>
     );
   }
 }
 
-Roadmap.propTypes = {
+Traits.propTypes = {
   styles: PropTypes.object.isRequired
 };
 
@@ -42,4 +42,4 @@ export default withStyles(({ color }) => ({
       height: "750px"
     }
   }
-}))(Roadmap);
+}))(Traits);

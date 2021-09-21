@@ -1,23 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HashRouter, Route, Link } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 // import components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import pages
+import About from "./pages/About";
 import Home from "./pages/Home";
 import Roadmap from "./pages/Roadmap";
+import Traits from "./pages/Traits";
 import { css, withStyles } from "./withStyles";
 
 function App({ styles }) {
   return (
     <HashRouter>
       <div>
-        <Link to='/roadmap'>Roadmap</Link>
         <Header {...css(styles.header)} />
         <div {...css(styles.container)}>
           <Route exact path='/' component={Home} />
-          <Route exact path='/roadmap' component={Roadmap} />
+          <Route path='/roadmap' component={Roadmap} />
+          <Route path='/about' component={About} />
+          <Route path='/traits' component={Traits} />
         </div>
         <Footer />
       </div>
