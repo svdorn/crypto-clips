@@ -40,14 +40,13 @@ export default withStyles(() => ({
 
   image_clickable: {
     margin: "0 10px",
-    opacity: "0.4",
+    opacity: "0.6",
     ":hover": {
-      opacity: "0.6"
+      opacity: "1"
     }
   },
 
   image: {
-    height: "15px",
-    color: "#fff"
+    height: "15px"
   }
 }))(Social);

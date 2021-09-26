@@ -124,8 +124,10 @@ export default withStyles(({ color }) => ({
   },
   intro_image: {
     height: "calc(60vh)",
-    minHeight: "300px"
-    //boxShadow: "4px 8px 4px 4px #fff, 4px 4px 4px 4px #fff !important"
+    minHeight: "300px",
+    boxShadow: "0px 0px 12px 6px #676767",
+    mozBoxShadow: "0px 0px 12px 6px #676767",
+    webkitBoxShadow: "0px 0px 12px 6px #676767" 
   },
   /* entrepreneur styling */
   entrepreneur: {
