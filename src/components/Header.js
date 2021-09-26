@@ -70,7 +70,7 @@ export default withStyles(({ color }) => ({
     padding: "0 15px",
     textDecoration: "none",
     textAlign: "left",
-    color: "white",
+    color: color.white,
     fontWeight: "600",
     opacity: "0.6",
     ":hover": {

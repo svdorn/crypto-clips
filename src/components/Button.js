@@ -17,7 +17,7 @@ function Button({ text, onClick, styles, type }) {
 export default withStyles(({ color }) => ({
   container: {
     color: color.primary,
-    backgroundColor: "white",
+    backgroundColor: color.white,
     borderRadius: 3,
     border: 0,
     height: 48,

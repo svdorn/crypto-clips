@@ -39,7 +39,7 @@ export default withStyles(() => ({
   },
 
   image_clickable: {
-    margin: "0 0 0 20px",
+    margin: "0 10px",
     opacity: "0.4",
     ":hover": {
       opacity: "0.6"

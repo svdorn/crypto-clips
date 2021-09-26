@@ -34,7 +34,7 @@ export default withStyles(({ color }) => ({
   },
 
   by: {
-    color: "white"
+    color: color.white
   },
 
   icon: {

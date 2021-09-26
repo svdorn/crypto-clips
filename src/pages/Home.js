@@ -27,7 +27,8 @@ class Home extends React.Component {
     return (
       <div {...css(styles.container)}>
         <section {...css(styles.intro)}>
-          <div {...css(styles.intro_image_containter)}>
+          <div {...css(styles.intro_container)}>
+            <h2 {...css(styles.header)}>Traditional luxury meets the digital future.</h2>
             <img {...css(styles.intro_image)} src="/images/art_blocks.png" alt="Art Blocks" /> 
           </div>
         </section>
@@ -106,14 +107,25 @@ export default withStyles(({ color }) => ({
       height: "750px"
     }
   },
-  intro_image_containter: {
+  header: {
+    fontWeight: "700px",
+    fontSize: "36px",
+    color: color.secondary,
+    "@media (max-width: 1000px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "25px"
+    }
+  },
+  intro_container: {
     verticalAlign: "middle",
-    paddingTop: "100px"
+    paddingTop: "60px"
   },
   intro_image: {
-    height: "calc(70vh)",
-    minHeight: "300px",
-    boxShadow: "4px 8px 4px 4px #fff, 4px 4px 4px 4px #fff !important"
+    height: "calc(60vh)",
+    minHeight: "300px"
+    //boxShadow: "4px 8px 4px 4px #fff, 4px 4px 4px 4px #fff !important"
   },
   /* entrepreneur styling */
   entrepreneur: {
