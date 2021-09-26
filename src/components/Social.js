@@ -3,14 +3,8 @@ import PropTypes from "prop-types";
 import { css, withStyles } from "../withStyles";
 
 const icons = [
-  { name: "twitter", href: "https://twitter.com/stphn_drn" },
-  { name: "github", href: "https://github.com/svdorn" },
-  {
-    name: "linkedin",
-    href: "https://www.linkedin.com/in/stephen-dorn-149055a3/"
-  },
-  { name: "instagram", href: "https://www.instagram.com/stephen.dorn/" },
-  { name: "email", href: "mailto:stevedorn9@gmail.com" }
+  { name: "discord", href: "https://github.com/svdorn" },
+  { name: "twitter", href: "https://twitter.com/stphn_drn" }
 ];
 
 function Social({ styles }) {
@@ -45,7 +39,7 @@ export default withStyles(() => ({
   },
 
   image_clickable: {
-    margin: "0 5px",
+    margin: "0 0 0 20px",
     opacity: "0.4",
     ":hover": {
       opacity: "0.6"
@@ -53,6 +47,7 @@ export default withStyles(() => ({
   },
 
   image: {
-    height: "34px"
+    height: "15px",
+    color: "#fff"
   }
 }))(Social);

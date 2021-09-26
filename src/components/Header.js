@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { css, withStyles } from "../withStyles";
+import Social from "./Social";
 
 const menuItems = [
   { name: "About", link: "about" },
@@ -15,17 +16,22 @@ class Header extends React.Component {
 
     return (
       <nav {...css(styles.container)}>
-        <img
-          {...css(styles.terminal)}
-          src="/images/terminal.svg"
-          alt="Terminal"
-        />
+        <Link key="Home" to="/">
+          <img
+            {...css(styles.terminal)}
+            src="/images/terminal.svg"
+            alt="Terminal"
+          />
+        </Link>
         <div {...css(styles.menu_items)}>
           {menuItems.map(item => (
             <Link key={item.name} to={item.link} {...css(styles.menu_item)}>
               {item.name}
             </Link>
           ))}
+          <div {...css(styles.social)}>
+            <Social />
+          </div>
         </div>
       </nav>
     );
@@ -50,7 +56,7 @@ export default withStyles(({ color }) => ({
 
   social: {
     display: "inline-block",
-    marginTop: "13px",
+    marginTop: "3px",
     float: "right"
   },
 
